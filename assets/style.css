@@ -13,7 +13,7 @@ main {
 }
 
 section {
-    margin: 50px 0 75px;
+    margin: 50px 0;
 }
 
 h2 {
@@ -55,11 +55,20 @@ h2 {
 }
 
 .accordion-content {
-    padding: 0 20px 20px;
+    padding: 10px 20px 30px;
 }
 
 .accordion-content p {
     margin: 0;
+}
+
+.links {
+    padding: 10px;
+    text-align: center;
+}
+
+.links a {
+    padding: 0 30px;
 }
 
 /*******************************************************/

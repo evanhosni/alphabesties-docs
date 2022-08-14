@@ -15,27 +15,13 @@
     </header>
 
     <main>
-        <hr>
-
-        <section id="table-of-contents">
-            <h2>Table of Contents</h2>
-            <ul>
-                <li><a href="#webflow">Webflow</a></li>
-                <!-- <li><a href="#content">Adding Content</a></li>
-                <li><a href="#tiers-and-visibility">Tiers and Visibility</a></li> -->
-                <li><a href="#google-sheets">Google Sheets</a></li>
-                <li><a href="#memberstack">Memberstack</a></li>
-                <li><a href="#pipedream">Pipedream</a></li>
-                <li><a href="#links">Links</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </section>
 
         <hr>
         
         <section id="webflow">
             <h2>Webflow</h2>
             <p class="good">Webflow is the front-end. You will use it to add content to the site.</p>
+
             <div class="accordion">
                 <h3 class="accordion-header" onclick="accordion('what-is-webflow')">What is Webflow?</h3>
                 <div class="accordion-content" id="what-is-webflow" style="display: none;">
@@ -57,8 +43,6 @@
                                 <li>Unauthorized</li>
                                 <li>Footer</li>
                             </ul>
-                            <!-- <p>* A div is pretty much a container. The 'Content' div is where all of the page content will go, with the exception of the aforementioned symbols.</p><br>
-                            <p>** A symbol is essentially a div that stays the same from page to page. If you make an adjustment to the 'Navbar' on the home page, it will affect the Navbar on every other page as well.</p> -->
                         </div>
                         <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around;">
                             <div style="padding: 20px;">
@@ -71,32 +55,33 @@
                             </div>
                         </div>
                     </div>
-                    <p>Please be sure to include these components on <strong>every</strong> AlphaBESTIES page. This has been made easy for you, as the site includes a template page for you to use as a starting point when creating a new page (see 'Adding Content' section below). Also refrain from renaming these components or changing their selector (class) or ID.</p>
+                    <p>Please be sure to include these components on <strong>every</strong> AlphaBESTIES page. This has been made easy for you, as the site includes a template page for you to use as a starting point when creating a new page (see <span style="font-style: italic;">Adding Content</span> section below). Also refrain from renaming these components or changing their selector (class) or ID.</p>
                     <br>
                     <p>If you make the mistake of removing or renaming an element or its selector/ID, the site will still publish but the page may be broken. Upon visiting the page, your browser will display an alert that looks like this:</p>
                     <div style="padding: 20px; text-align: center;">
                         <img src="./assets/alert-missing-component.png" alt="alert missing component">
                     </div>
-                    <p>In this case, the home page is missing the 'Unauthorized' symbol. This can be resolved by simply re-adding that symbol to the page.</p>
+                    <p>In this case, the home page is missing the <span style="font-style: italic;">Unauthorized</span> symbol. This can be resolved by simply re-adding that symbol to the page.</p>
                 </div>
             </div>
 
             <div class="accordion">
                 <h3 class="accordion-header" onclick="accordion('webflow-content')">Adding Content</h3>
                 <div class="accordion-content" id="webflow-content" style="display: none;">
-                    <p>To add a new page, start with the existing 'Template' page. Open the 'Pages' tab, hover over 'Template', and click the settings wheel that appears.</p>
+                    <p style="text-align: center; font-style: italic;">Content is added via the <a href="https://webflow.com/design/alphabesties">Site Design</a> page.</p><br><br>
+                    <p>To add a new page, start with the existing <span style="font-style: italic;">Template</span> page. Open the <span style="font-style: italic;">Pages</span> tab, hover over <span style="font-style: italic;">Template</span>, and click the settings wheel that appears.</p>
                     <div style="padding: 20px; text-align: center;">
                         <img style="height: 400px" src="./assets/template-settings.png" alt="template settings">
                     </div>
-                    <p>Then, click on the duplicate icon in the 'Template' settings window, and rename your new page.</p>
+                    <p>Then, click on the duplicate icon in the <span style="font-style: italic;">Template</span> settings window, and rename your new page.</p>
                     <div style="padding: 20px; text-align: center;">
                         <img style="height: 400px" src="./assets/template-duplicate.png" alt="template duplicate">
                     </div>
-                    <p>Note that your new page has a 'Navbar', 'Unauthorized', and 'Footer' component, as well as a 'Content' container. These are all essential, and <strong>the page will break if you remove any of these</strong> (see 'Warning!' section above for more details).</p>
+                    <p>Note that your new page has a <span style="font-style: italic;">Navbar</span>, <span style="font-style: italic;">Unauthorized</span>, and <span style="font-style: italic;">Footer</span> component, as well as a <span style="font-style: italic;">Content</span> container. These are all essential, and <strong>the page will break if you remove any of these</strong> (see <span style="font-style: italic;">Warning!</span> section above for more details).</p>
                     <div style="padding: 20px; text-align: center;">
                         <img style="height: 400px" src="./assets/example-page.png" alt="example page">
                     </div>
-                    <p>Excluding the 'Navbar', 'Unauthorized', and 'Footer' components, all page content must be added within the 'Content' div (highlighted in the image above). A completed page might look something like this:</p>
+                    <p>Excluding the <span style="font-style: italic;">Navbar</span>, <span style="font-style: italic;">Unauthorized</span>, and <span style="font-style: italic;">Footer</span> components, all page content must be added within the <span style="font-style: italic;">Content</span> div (highlighted in the image above). A completed page might look something like this:</p>
                     <div style="padding: 20px; text-align: center;">
                         <img style="height: 400px" src="./assets/example-page-completed.png" alt="completed example page">
                     </div>
@@ -106,14 +91,15 @@
             <div class="accordion">
                 <h3 class="accordion-header" onclick="accordion('webflow-tiers-and-visibility')">Employee Tiers and Page Visibility</h3>
                 <div class="accordion-content" id="webflow-tiers-and-visibility" style="display: none;">
+                    <p style="text-align: center; font-style: italic;">Employee Tiers and Page Visibility can be set via the <a href="https://webflow.com/dashboard/sites/alphabesties/code">Site Code</a> page.</p><br><br>
                     <p>You may want certain pages to be hidden from lower-level employees. In this section, you will learn how to set employee tiers and hide pages based on employment level. Our site uses three employee tiers: Basic, Management, and Leadership.</p><br>
                     <h4 style="text-align: center;">Setting Employee Tiers:</h4>
                     <div style="padding: 0 0 10px; text-align: center;">
                         <img style="width: 100%" src="./assets/tiers.png" alt="setting employee tiers">
                     </div>
                     <p style="text-align: center;">In the above example, users with the "Program Specialists" role belong to the Leadership tier.</p><br><br>
-                    <p>Each AlphaBESTIES user has a role, which is set in the 'Job Function Description' column of our <a href="https://docs.google.com/spreadsheets/d/1pZs5qIkjfv-j7nlv9gHmeAQ6CoOhNf4-xDYRC7jKH_M/edit#gid=1204958616">AlphaBESTIES Website User List</a> Google Sheets document (see 'Google Sheets' section below for more details).</p><br>
-                    <p>By default, every role belongs to the 'Basic' tier unless otherwise specified. To change the tier of a specific role, you must add the role to the proper array* (either <span class="code">leadershipRoles</span> or <span class="code">managementRoles</span>). Make sure the role is written <strong>exactly</strong> as it is in the 'Job Function Description' column of our Google Sheets document.</p><br>
+                    <p>Each AlphaBESTIES user has a role, which is set in the <span style="font-style: italic;">Job Function Description</span> column of our <a href="https://docs.google.com/spreadsheets/d/1pZs5qIkjfv-j7nlv9gHmeAQ6CoOhNf4-xDYRC7jKH_M/edit#gid=1204958616">AlphaBESTIES Website User List</a> spreadsheet (see <span style="font-style: italic;">Google Sheets</span> section below for more details).</p><br>
+                    <p>By default, every role belongs to the <span style="font-style: italic;">Basic</span> tier unless otherwise specified. To change the tier of a specific role, you must add the role to the proper array* (either <span class="code">leadershipRoles</span> or <span class="code">managementRoles</span>). Make sure the role is written <strong>exactly</strong> as it is in the <span style="font-style: italic;">Job Function Description</span> column of our Google Sheets spreadsheet.</p><br>
                     <p>*<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">More info on arrays</a></p><br>
                     <h4 style="text-align: center;">Setting Page Visibility:</h4>
                     <div style="padding: 0 0 10px; text-align: center;">
@@ -128,6 +114,15 @@
                     </div>
                 </div>
             </div>
+
+            <div class="links">
+                <h3>Links:</h3>
+                <div>
+                    <a href="https://webflow.com/design/alphabesties">Site Design</a>
+                    <a href="https://webflow.com/dashboard/sites/alphabesties/code">Site Code</a>
+                    <a href="https://university.webflow.com/lesson">Webflow Docs</a>
+                </div>
+            </div>
         </section>
 
         <hr>
@@ -135,7 +130,80 @@
         <section id="google-sheets">
             <h2>Google Sheets</h2>
             <p class="good">Google Sheets is our employee database. You will use it to add/remove/update employee information.</p>
-            <p>What about passwords? Worry not, passwords are handled by Memberstack.</p>
+
+            <div class="accordion">
+                <h3 class="accordion-header" onclick="accordion('what-is-google-sheets')">What is Google Sheets?</h3>
+                <div class="accordion-content" id="what-is-google-sheets" style="display: none;">
+                    <p>Google Sheets is what we use for our employee database. Employee information can be added, updated, and removed through our <a href="https://docs.google.com/spreadsheets/d/1pZs5qIkjfv-j7nlv9gHmeAQ6CoOhNf4-xDYRC7jKH_M/edit#gid=1204958616">AlphaBESTIES Website User List</a>, and these changes will automatically be reflected in our site's user records.</p><br>
+                    <h4 style="text-align: center;">How does it work?</h4>
+                    <p style="text-align: center;">Google Sheets &#8594 Pipedream &#8594 Memberstack &#8594 AlphaBESTIES website</p><br>
+                    <p>As employees join, leave, or grow within AlphaBEST, these changes must be tracked in our Google Sheets spreadsheet. Pipedream listens for these changes, and when they happen it triggers our <a href="https://pipedream.com/@ehosni/alphabesties-p_OKC98DA/inspect">AlphaBESTIES Pipedream Workflow</a>. Here, Pipedream analyzes the changes and updates our <a href="https://app.memberstack.com/apps/app_cl33f6a0w000g0vfwdtrh3nzf/members">Memberstack Members List</a> accordingly. Memberstack stores user data and handles login, logout, and password change functionality on the AlphaBESTIES website (See <span style="font-style: italic;">Pipedream</span> and <span style="font-style: italic;">Memberstack</span> sections below for more details).</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <h3 class="accordion-header" onclick="accordion('google-sheets-warning')">Warning!</h3>
+                <div class="accordion-content" id="google-sheets-warning" style="display: none;">
+                    <p>In order for Pipedream to properly understand our Google Sheets spreadsheet, we must be careful when we are altering it. Here are the important things to keep in mind:</p>
+                    <ul>
+                        <li><strong>Column order matters.</strong> Although Pipedream does not use all the information in the spreadsheet, it will get confused if the column order changes, and this will break the code and possibly result in unwanted changes to our Memberstack members list. Thus, <strong>do not remove or re-order columns.</strong> The order of the rows, on the other hand, does not matter and can be changed freely.</li>
+                        <li><strong>Changes are instantaneous.</strong> Well, they may take a few minutes but they are triggered instantly every time the spreadsheet saves. This means <strong>do not make any changes that you don't want to be reflected in our Memberstack members list.</strong> For example, temporarily removing an employee from the spreadsheet will result in the deletion of that member's records, so next time that employee logs in they will have to reset their password again.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <h3 class="accordion-header" onclick="accordion('google-sheets-user-data')">User Data</h3>
+                <div class="accordion-content" id="google-sheets-user-data" style="display: none;">
+                    <p>In our <a href="https://docs.google.com/spreadsheets/d/1pZs5qIkjfv-j7nlv9gHmeAQ6CoOhNf4-xDYRC7jKH_M/edit#gid=1204958616">AlphaBESTIES Website User List</a> spreadsheet, the relevant user information is marked by a red column header. These five columns are:</p>
+                    <ul>
+                        <li><strong>File Number:</strong> This is a required field and must stay constant*.</li>
+                        <li><strong>Personal Email:</strong> This will be the user's login email.  This is a required field and must stay constant*.</li>
+                        <li><strong>First Name:</strong> Yup.</li>
+                        <li><strong>Last Name:</strong> Yep.</li>
+                        <li><strong>Job Function Description:</strong> This will determine which pages the user is authorized to see (See <span style="font-style: italic;">Webflow - Employee Tiers and Page Visibility</span> section above for more details).</li>
+                    </ul>
+                    <p>*If this field is left empty, the user's records will be deleted from Memberstack (if they exist). If user records do not exist, no new user will be created until these fields are entered. Changes to these fields will result in the deletion of the existing user and the creation of a new user.</p><br>
+                    <p>Passwords are handled entirely through Memberstack.</p>
+                </div>
+            </div>
+
+            <div class="links">
+                <h3>Links:</h3>
+                <div>
+                    <a href="https://docs.google.com/spreadsheets/d/1pZs5qIkjfv-j7nlv9gHmeAQ6CoOhNf4-xDYRC7jKH_M/edit#gid=1204958616">AlphaBESTIES Website User List</a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        
+        <section id="pipedream">
+            <h2>Pipedream</h2>
+            <p class="bad">Pipedream is part of our back-end. You will likely not need to touch it.</p>
+
+            <div class="accordion">
+                <h3 class="accordion-header" onclick="accordion('what-is-pipedream')">What is Pipedream?</h3>
+                <div class="accordion-content" id="what-is-pipedream" style="display: none;">
+                    <p>Pipedream is the bridge between our <a href="https://docs.google.com/spreadsheets/d/1pZs5qIkjfv-j7nlv9gHmeAQ6CoOhNf4-xDYRC7jKH_M/edit#gid=1204958616">AlphaBESTIES Website User List</a> spreadsheet and our <a href="https://app.memberstack.com/apps/app_cl33f6a0w000g0vfwdtrh3nzf/members">Memberstack Members List</a>. It listens for changes in the spreadsheet, analyzes said changes, and creates/updates/deletes Memberstack members accordingly.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <h3 class="accordion-header" onclick="accordion('pipedream-notes')">Notes</h3>
+                <div class="accordion-content" id="pipedream-notes" style="display: none;">
+                    <p>You will likely not need access to our <a href="https://pipedream.com/@ehosni/alphabesties-p_OKC98DA/inspect">AlphaBESTIES Pipedream Workflow</a>, but if you do, contact me for login information.</p><br>
+                    <p>We are currently using a free Pipedream plan. This comes with its limitations. Namely, <strong>data-limits</strong>. Our free plan limits the amount of changes Pipedream will process in one day, which may delay Memberstack member list updates.</p>
+                </div>
+            </div>
+
+            <div class="links">
+                <h3>Links:</h3>
+                <div>
+                    <a href="https://pipedream.com/@ehosni/alphabesties-p_OKC98DA/inspect">AlphaBESTIES Pipedream Workflow</a>
+                    <a href="https://pipedream.com/docs">Pipedream Docs</a>
+                </div>
+            </div>
         </section>
 
         <hr>
@@ -143,59 +211,29 @@
         <section id="memberstack">
             <h2>Memberstack</h2>
             <p class="bad">Memberstack is part of our back-end. You will likely not need to touch it.</p>
-        </section>
 
-        <hr>
-
-        <section id="pipedream">
-            <h2>Pipedream</h2>
-            <p class="bad">Pipedream is part of our back-end. You will likely not need to touch it.</p>
-            <div class="description">
-                <h3>What is Pipedream?</h3>
+            <div class="accordion">
+                <h3 class="accordion-header" onclick="accordion('what-is-memberstack')">What is Memberstack?</h3>
+                <div class="accordion-content" id="what-is-memberstack" style="display: none;">
+                    <p>Memberstack stores user data and handles login, logout, and password change functionality on the AlphaBESTIES website.</p>
+                </div>
             </div>
-        </section>
 
-        <hr>
+            <div class="accordion">
+                <h3 class="accordion-header" onclick="accordion('memberstack-notes')">Notes</h3>
+                <div class="accordion-content" id="memberstack-notes" style="display: none;">
+                    <p>You will likely not need access to our <a href="https://app.memberstack.com/apps/app_cl33f6a0w000g0vfwdtrh3nzf/members">Memberstack Members List</a>, but if you do, contact me for login information.</p>
+                </div>
+            </div>
 
-        <section id="links">
-            <h2>Links</h2>
-            <ul>
-                <li>
-                    <h3>AlphaBESTIES</h3>
-                    <ul>
-                        <li><a href="https://alphabesties.webflow.io/">Site Home Page</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Webflow</h3>
-                    <ul>
-                        <li><a href="https://university.webflow.com/lesson">Docs</a></li>
-                        <li><a href="https://webflow.com/design/alphabesties">Site Design</a></li>
-                        <li><a href="https://webflow.com/dashboard/sites/alphabesties/code">Site Code</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Google Sheets</h3>
-                    <ul>
-                        <li><a href="https://docs.google.com/spreadsheets/d/1pZs5qIkjfv-j7nlv9gHmeAQ6CoOhNf4-xDYRC7jKH_M/edit#gid=1204958616">AlphaBESTIES Website User List</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Memberstack</h3>
-                    <ul>
-                        <li><a href="https://www.notion.so/2-0-Help-Center-29fffe9e648d48f5aefaf08b62066d08">Docs</a></li>
-                        <li><a href="https://www.notion.so/DOM-Package-API-1b026c6f928e4436b38f9146dd3d6584">API Docs</a></li>
-                        <li><a href="https://app.memberstack.com/apps/app_cl33f6a0w000g0vfwdtrh3nzf/members">Memberstack Member List</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Pipedream</h3>
-                    <ul>
-                        <li><a href="https://pipedream.com/docs">Docs</a></li>
-                        <li><a href="https://pipedream.com/@ehosni/alphabesties-p_OKC98DA/inspect">AlphaBESTIES Workflow</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="links">
+                <h3>Links:</h3>
+                <div>
+                    <a href="https://app.memberstack.com/apps/app_cl33f6a0w000g0vfwdtrh3nzf/members">Memberstack Members List</a>
+                    <a href="https://www.notion.so/2-0-Help-Center-29fffe9e648d48f5aefaf08b62066d08">Memberstack Docs</a>
+                    <a href="https://www.notion.so/DOM-Package-API-1b026c6f928e4436b38f9146dd3d6584">Memberstack API Docs</a>
+                </div>
+            </div>
         </section>
 
         <hr>
