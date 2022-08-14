@@ -18,6 +18,11 @@ section {
 
 h2 {
     text-align: center;
+    font-size: 1.75em;
+}
+
+img {
+    max-width: 100%;
 }
 
 /*******************************************************/
