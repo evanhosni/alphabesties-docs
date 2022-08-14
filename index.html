@@ -4,9 +4,219 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AlphaBESTIES Docs</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    
+
+    <header>
+        <img src="./assets/AlphaBEST-logo.png" alt="AlphaBEST logo">
+        <h1>AlphaBESTIES Website Documentation</h1>
+    </header>
+
+    <main>
+        <hr>
+
+        <section id="table-of-contents">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#webflow">Webflow</a></li>
+                <!-- <li><a href="#content">Adding Content</a></li>
+                <li><a href="#tiers-and-visibility">Tiers and Visibility</a></li> -->
+                <li><a href="#google-sheets">Google Sheets</a></li>
+                <li><a href="#memberstack">Memberstack</a></li>
+                <li><a href="#pipedream">Pipedream</a></li>
+                <li><a href="#links">Links</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </section>
+
+        <hr>
+        
+        <section id="webflow">
+            <h2>Webflow</h2>
+            <p class="good">Webflow is the front-end. You will use it to add content to the site.</p>
+            <div class="accordion">
+                <h3 class="accordion-header" onclick="accordion('what-is-webflow')">What is Webflow?</h3>
+                <div class="accordion-content" id="what-is-webflow" style="display: none;">
+                    <p>Webflow is the website builder that we are using for the AlphaBESTIES site. This is the only tool you need to add content to the site.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <h3 class="accordion-header" onclick="accordion('webflow-warning')">Warning!</h3>
+                <div class="accordion-content" id="webflow-warning" style="display: none;">
+                    <p>There are a few AlphaBESTIES-specific things you have to be careful about when using Webflow. Our site uses custom JavaScript to control much of the site functionality including user login/logout, password changing, and hiding certain pages from certain membership levels. <strong>The JavaScript requires certain components to be present on the page.</strong></p>
+                    <div style="padding: 20px">
+                        <div>
+                            <p>These components include:</p>
+                            <ul>
+                                <li>Login Modal (home page only)</li>
+                                <li>Navbar</li>
+                                <li>Content</li>
+                                <li>Unauthorized</li>
+                                <li>Footer</li>
+                            </ul>
+                            <!-- <p>* A div is pretty much a container. The 'Content' div is where all of the page content will go, with the exception of the aforementioned symbols.</p><br>
+                            <p>** A symbol is essentially a div that stays the same from page to page. If you make an adjustment to the 'Navbar' on the home page, it will affect the Navbar on every other page as well.</p> -->
+                        </div>
+                        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around;">
+                            <div style="padding: 20px;">
+                                <p style="text-align: center; padding-bottom: 10px;">Home page</p>
+                                <img style="height: 300px" src="./assets/homepage-layout.png" alt="home page layout">
+                            </div>
+                            <div style="padding: 20px;">
+                                <p style="text-align: center; padding-bottom: 10px;">All other pages</p>
+                                <img style="height: 300px" src="./assets/template-layout.png" alt="template layout">
+                            </div>
+                        </div>
+                    </div>
+                    <p>Please be sure to include these components on <strong>every</strong> AlphaBESTIES page. This has been made easy for you, as the site includes a template page for you to use as a starting point when creating a new page (see 'Adding Content' section below). Also refrain from renaming these components or changing their selector (class) or ID.</p>
+                    <br>
+                    <p>If you make the mistake of removing or renaming an element or its selector/ID, the site will still publish but the page may be broken. Upon visiting the page, your browser will display an alert that looks like this:</p>
+                    <div style="padding: 20px; text-align: center;">
+                        <img src="./assets/alert-missing-component.png" alt="alert missing component">
+                    </div>
+                    <p>In this case, the home page is missing the 'Unauthorized' symbol. This can be resolved by simply re-adding that symbol to the page.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <h3 class="accordion-header" onclick="accordion('webflow-content')">Adding Content</h3>
+                <div class="accordion-content" id="webflow-content" style="display: none;">
+                    <p>To add a new page, start with the existing 'Template' page. Open the 'Pages' tab, hover over 'Template', and click the settings wheel that appears.</p>
+                    <div style="padding: 20px; text-align: center;">
+                        <img style="height: 400px" src="./assets/template-settings.png" alt="template settings">
+                    </div>
+                    <p>Then, click on the duplicate icon in the 'Template' settings window, and rename your new page.</p>
+                    <div style="padding: 20px; text-align: center;">
+                        <img style="height: 400px" src="./assets/template-duplicate.png" alt="template duplicate">
+                    </div>
+                    <p>Note that your new page has a 'Navbar', 'Unauthorized', and 'Footer' component, as well as a 'Content' container. These are all essential, and <strong>the page will break if you remove any of these</strong> (see 'Warning!' section above for more details).</p>
+                    <div style="padding: 20px; text-align: center;">
+                        <img style="height: 400px" src="./assets/example-page.png" alt="example page">
+                    </div>
+                    <p>Excluding the 'Navbar', 'Unauthorized', and 'Footer' components, all page content must be added within the 'Content' div (highlighted in the image above). A completed page might look something like this:</p>
+                    <div style="padding: 20px; text-align: center;">
+                        <img style="height: 400px" src="./assets/example-page-completed.png" alt="completed example page">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <h3 class="accordion-header" onclick="accordion('webflow-tiers-and-visibility')">Employee Tiers and Page Visibility</h3>
+                <div class="accordion-content" id="webflow-tiers-and-visibility" style="display: none;">
+                    <p>You may want certain pages to be hidden from lower-level employees. In this section, you will learn how to set employee tiers and hide pages based on employment level. Our site uses three employee tiers: Basic, Management, and Leadership.</p><br>
+                    <h4 style="text-align: center;">Setting Employee Tiers:</h4>
+                    <div style="padding: 0 0 10px; text-align: center;">
+                        <img style="width: 100%" src="./assets/tiers.png" alt="setting employee tiers">
+                    </div>
+                    <p style="text-align: center;">In the above example, users with the "Program Specialists" role belong to the Leadership tier.</p><br><br>
+                    <p>Each AlphaBESTIES user has a role, which is set in the 'Job Function Description' column of our <a href="https://docs.google.com/spreadsheets/d/1pZs5qIkjfv-j7nlv9gHmeAQ6CoOhNf4-xDYRC7jKH_M/edit#gid=1204958616">AlphaBESTIES Website User List</a> Google Sheets document (see 'Google Sheets' section below for more details).</p><br>
+                    <p>By default, every role belongs to the 'Basic' tier unless otherwise specified. To change the tier of a specific role, you must add the role to the proper array* (either <span class="code">leadershipRoles</span> or <span class="code">managementRoles</span>). Make sure the role is written <strong>exactly</strong> as it is in the 'Job Function Description' column of our Google Sheets document.</p><br>
+                    <p>*<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">More info on arrays</a></p><br>
+                    <h4 style="text-align: center;">Setting Page Visibility:</h4>
+                    <div style="padding: 0 0 10px; text-align: center;">
+                        <img style="width: 100%" src="./assets/visibility.png" alt="setting page visibility">
+                    </div>
+                    <p style="text-align: center;">In the above example, the "curriculum" page will not be visible to users belonging to the Basic tier.</p><br><br>
+                    <p>Now that we have divided our roles into three separate tiers, we can hide pages from specified tiers by entering the page's name** into the appropriate array (<span class="code">hiddenFromBasic</span>, <span class="code">hiddenFromManagement</span>, or <span class="code">hiddenFromLeadership</span>).</p><br>
+                    <p>**In our case, the page's name refers to the first part of the URL's path. For example, the page http://alphabesties.com/<span style="text-decoration: underline;">curriculum</span>/math would be called "curriculum".</p><br><br>
+                    <p>This is what it looks like when a user visits a page they are not authorized to see:</p>
+                    <div style="padding: 20px; text-align: center;">
+                        <img style="width: 100%; border: 2px solid gray;" src="./assets/unauthorized.png" alt="unauthorized">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        
+        <section id="google-sheets">
+            <h2>Google Sheets</h2>
+            <p class="good">Google Sheets is our employee database. You will use it to add/remove/update employee information.</p>
+            <p>What about passwords? Worry not, passwords are handled by Memberstack.</p>
+        </section>
+
+        <hr>
+
+        <section id="memberstack">
+            <h2>Memberstack</h2>
+            <p class="bad">Memberstack is part of our back-end. You will likely not need to touch it.</p>
+        </section>
+
+        <hr>
+
+        <section id="pipedream">
+            <h2>Pipedream</h2>
+            <p class="bad">Pipedream is part of our back-end. You will likely not need to touch it.</p>
+            <div class="description">
+                <h3>What is Pipedream?</h3>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="links">
+            <h2>Links</h2>
+            <ul>
+                <li>
+                    <h3>AlphaBESTIES</h3>
+                    <ul>
+                        <li><a href="https://alphabesties.webflow.io/">Site Home Page</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Webflow</h3>
+                    <ul>
+                        <li><a href="https://university.webflow.com/lesson">Docs</a></li>
+                        <li><a href="https://webflow.com/design/alphabesties">Site Design</a></li>
+                        <li><a href="https://webflow.com/dashboard/sites/alphabesties/code">Site Code</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Google Sheets</h3>
+                    <ul>
+                        <li><a href="https://docs.google.com/spreadsheets/d/1pZs5qIkjfv-j7nlv9gHmeAQ6CoOhNf4-xDYRC7jKH_M/edit#gid=1204958616">AlphaBESTIES Website User List</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Memberstack</h3>
+                    <ul>
+                        <li><a href="https://www.notion.so/2-0-Help-Center-29fffe9e648d48f5aefaf08b62066d08">Docs</a></li>
+                        <li><a href="https://www.notion.so/DOM-Package-API-1b026c6f928e4436b38f9146dd3d6584">API Docs</a></li>
+                        <li><a href="https://app.memberstack.com/apps/app_cl33f6a0w000g0vfwdtrh3nzf/members">Memberstack Member List</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Pipedream</h3>
+                    <ul>
+                        <li><a href="https://pipedream.com/docs">Docs</a></li>
+                        <li><a href="https://pipedream.com/@ehosni/alphabesties-p_OKC98DA/inspect">AlphaBESTIES Workflow</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Please feel free to contact me with any questions. I am happy to provide support indefinitely.</p>
+            <a href="mailto:evankhaledhosni@gmail.com" target="_blank">evankhaledhosni@gmail.com</a>
+        </section>
+    </main>
+
+    <script>
+        function accordion(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>

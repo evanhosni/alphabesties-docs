@@ -1,0 +1,74 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    margin: 50px auto;
+    text-align: center;
+}
+
+main {
+    max-width: 1000px;
+    margin: 50px auto 100px;
+}
+
+section {
+    margin: 50px 0 75px;
+}
+
+h2 {
+    text-align: center;
+}
+
+/*******************************************************/
+
+.good {
+    text-align: center;
+    font-weight: bold;
+    color: green;
+}
+
+.bad {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+
+.code {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: rgb(200, 200, 200);
+    padding: 0 5px;
+}
+
+.accordion {
+    border: 2px solid black;
+    margin-top: -2px;
+}
+
+.accordion-header {
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+.accordion-content {
+    padding: 0 20px 20px;
+}
+
+.accordion-content p {
+    margin: 0;
+}
+
+/*******************************************************/
+
+#table-of-contents ul {
+    margin: auto;
+    width: 200px;
+}
+
+#contact {
+    text-align: center;
+}
